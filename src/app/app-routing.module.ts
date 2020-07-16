@@ -11,6 +11,18 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'views',
+    loadChildren: () => import('./pages/views/views.module').then( m => m.ViewsPageModule)
+  },
+  {
+    path: 'data',
+    loadChildren: () => import('./pages/data/data.module').then( m => m.DataPageModule)
+  },
+  {
+    path: 'alerts',
+    loadChildren: () => import('./pages/alerts/alerts.module').then( m => m.AlertsPageModule)
+  },
 ];
 
 @NgModule({

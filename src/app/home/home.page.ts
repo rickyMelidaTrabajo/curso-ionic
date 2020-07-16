@@ -6,7 +6,24 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
+  componentes: Componente[] = [
+    {
+      icon: 'american-football',
+      name: 'Action Sheets',
+      redirecTo: '/data'
+    },
+    {
+      icon: 'logo-apple-appstore',
+      name: 'Alerts',
+      redirecTo: '/alerts'
+    }
+  ];
   constructor() {}
 
+}
+
+interface Componente {
+  icon: string;
+  name: string;
+  redirecTo: string;
 }

@@ -1,20 +1,38 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Titulo
     </ion-title>
   </ion-toolbar>
+  
 </ion-header>
 
-<ion-content [fullscreen]="true">
+
+
+
+
+<ion-content>
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Titulo</ion-title>
     </ion-toolbar>
   </ion-header>
 
+  <ion-list>
+
+    <ion-item *ngFor="let c of componentes" 
+      [routerLink]="c.redirecTo" detail>
+      <ion-icon slot="start" [name]="c.icon"></ion-icon>
+      <ion-label>{{ c.name }}</ion-label>
+    </ion-item>
+  </ion-list>
+
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-button routerLink="/alerts"  >
+      Alert
+    </ion-button>
+    <ion-button routerLink="/data"  >
+      Data
+    </ion-button>
   </div>
 </ion-content>
