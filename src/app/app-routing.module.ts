@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'alerts',
     loadChildren: () => import('./pages/alerts/alerts.module').then( m => m.AlertsPageModule)
   },
+  {
+    path: 'action-sheet',
+    loadChildren: () => import('./pages/action-sheet/action-sheet.module').then( m => m.ActionSheetPageModule)
+  },
 ];
 
 @NgModule({

@@ -10,7 +10,7 @@ export class HomePage {
     {
       icon: 'american-football',
       name: 'Action Sheets',
-      redirecTo: '/data'
+      redirecTo: '/action-sheet'
     },
     {
       icon: 'logo-apple-appstore',
